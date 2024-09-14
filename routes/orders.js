@@ -3,7 +3,10 @@
 
 const express = require('express');
 const { Order, OrderItem, Product } = require('../models');
+
 const { generateOTP, generateQRCode } = require('../utils/token');
+// Use the generateOTP and generateQRCode functions in your order routes
+
 const router = express.Router();
 
 // Create a new order
