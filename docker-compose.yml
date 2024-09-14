@@ -1,0 +1,24 @@
+version: '3'
+services:
+  pos-backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - JWT_SECRET=mysecretkey
+      - DB_HOST=postgres
+      - DB_USER=user
+      - DB_PASS=pass
+      - DB_NAME=posdb
+    depends_on:
+      - postgres
+    volumes:
+      - .:/usr/src/app
+  postgres:
+    image: postgres:12-alpine
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: posdb
+    ports:
+      - "5432:5432"

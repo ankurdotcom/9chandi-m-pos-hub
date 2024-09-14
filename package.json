@@ -1,0 +1,20 @@
+{
+  "name": "9chandi-m-pos-hub",
+  "version": "1.0.0",
+  "description": "It's a mobile bases Point of Sale Platform which offer APIs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "sequelize": "^6.6.5",
+    "pg": "^8.6.0",
+    "pg-hstore": "^2.3.3",
+    "jsonwebtoken": "^8.5.1",
+    "bcrypt": "^5.0.1"
+  }
+}
